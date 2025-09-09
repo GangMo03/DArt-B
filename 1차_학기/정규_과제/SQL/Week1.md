@@ -88,7 +88,7 @@ ERD를 주로 사용한다.
 ---
 # 2️⃣ 학습 인증란
 
-https://github.com/GangMo03/Dart_B-Data_Literacy/blob/4b14b8d5e5740fa8926478fe5a97d3c60c5955b5/Week1.md
+![캡처 이미지](./images/화면%20캡처%202025-09-08%20115708.png?raw=true)
 
 
 <br>
