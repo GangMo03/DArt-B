@@ -48,6 +48,10 @@
 
 <!-- 새롭게 배운 내용을 자유롭게 정리해주세요.-->
 
+SELECT, FROM, WHERE 순으로 사용하고
+SELECT는 어떤 컬럼을 조회할지 지정할떄 사용
+FROM은 데이터를 가져올 테이블을 지정할떄 사용
+WHERE는 거기에 조건을 걸때 사용한다.
 
 ## 2-5. 집계 (Group By / HAVING / SUM,COUNT)
 
@@ -64,7 +68,7 @@
 
 # 2️⃣ 학습 인증란
 
-<!-- 이 글을 지우고, 여기에 학습한 것을 인증해주세요.-->
+![alt text](../../../images/학습_인증(2).png)
 
 
 
@@ -91,6 +95,12 @@ FROM pokemon;
 
 ~~~
 여기에 답을 작성해주세요!
+1.순서가 잘못돼서 SELECT-FROM-WHERE 순이 되어야한다.
+2.세미콜론을 매번 쓸 필요 없고 문장의 끝에서만 쓰면 된다.
+3.컬럼 별칭에는 큰따옴표를 사용해야 한다.
+SELECT name AS "포켓몬 이름", ID
+FROM pokemon
+WHERE type = 'Electric';
 ~~~
 
 
@@ -110,6 +120,11 @@ GROUP BY type;
 
 ~~~
 여기에 답을 작성해주세요.
+WHERE절에서는 AVG, SUM 같은 함수들을 사용하지 못하기 때문에 먼저 GROUP BY로 필터링을 걸어준뒤 사용하여야 한다.
+SELECT type, AVG(attack) AS avg_attack
+FROM pokemon
+GROUP BY type
+HAVING AVG(attack) >= 60;
 ~~~
 
 
