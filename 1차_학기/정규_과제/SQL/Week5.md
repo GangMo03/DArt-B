@@ -101,7 +101,13 @@ from
     group by
         trainer_id
 
-
+select
+    trainer_id,
+    min(datetime(catch_datetime, "asia/seoul")) as min_catch_datetime,
+    max(datetime(catch_datetime, "asia/seoul")) as max_catch_datetiem,
+from basic.trainer_pokemon
+group by
+    trainer_id
 
 <br>
 
