@@ -109,6 +109,30 @@ from basic.trainer_pokemon
 group by
     trainer_id
 
+select
+    id,
+    kor_name,
+    type1,
+    case
+        when type1 = "water" then "물"
+        when type1 = "fire" then "불"
+        when type1 = "electric" then "전기"
+        else "기타"
+    end as type1_Korean
+from basic.pokemon
+
+
+select
+    id,
+    name,
+    badge_count,
+    case
+        when badge_count >= 9 then "advanced"
+        when badge_count between 6 and 8 then "intermediate"
+    else "beginner"
+    end as trainer_level
+from basic.trainer
+
 <br>
 
 <br>
